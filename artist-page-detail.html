@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Page - Detail Karya</title>
+</head>
+<body>
+
+    <!-- ===== Sidebar ===== -->
+    <aside>
+        <!-- Logo -->
+        <div>
+            <a href="#"><img src="logo.png" alt="Artist Page Logo"></a>
+        </div>
+
+        <!-- Navigasi -->
+        <nav>
+            <ul>
+                <li><a href="#beranda" title="Beranda"><img src="icon-home.png" alt="Beranda"></a></li>
+                <li><a href="#jelajah" title="Jelajah"><img src="icon-explore.png" alt="Jelajah"></a></li>
+                <li><a href="#peta" title="Peta"><img src="icon-map.png" alt="Peta"></a></li>
+                <li><a href="#komunitas" title="Komunitas"><img src="icon-community.png" alt="Komunitas"></a></li>
+                <li><a href="#notifikasi" title="Notifikasi"><img src="icon-bell.png" alt="Notifikasi"></a></li>
+                <li><a href="#pengaturan" title="Pengaturan"><img src="icon-settings.png" alt="Pengaturan"></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ===== Konten Utama ===== -->
+    <main>
+
+        <!-- ===== Bagian Karya Utama ===== -->
+        <section aria-label="Detail Karya">
+            <!-- Judul karya -->
+            <header>
+                <h1>나기</h1>
+                <p>oleh <a href="#artis">@wideewinl_</a></p>
+            </header>
+
+            <!-- Gambar karya utama -->
+            <figure>
+                <img src="karya-nagi.jpg" alt="Ilustrasi hitam putih pria berjas hitam dengan bros salju">
+                <figcaption>
+                    Ilustrasi manga hitam putih — pria berambut hitam mengenakan setelan jas hitam dengan bros salju.
+                </figcaption>
+            </figure>
+
+            <!-- Aksi karya -->
+            <div>
+                <button type="button" title="Suka"><img src="icon-like.png" alt="Suka"> Suka</button>
+                <button type="button" title="Bagikan"><img src="icon-share.png" alt="Bagikan"> Bagikan</button>
+                <button type="button" title="Simpan"><img src="icon-bookmark.png" alt="Simpan"> Simpan</button>
+            </div>
+        </section>
+
+        <!-- ===== Bagian Komentar ===== -->
+        <section aria-label="Komentar">
+            <h2>Komentar</h2>
+
+            <!-- Komentar 1 -->
+            <article>
+                <header>
+                    <img src="avatar-wideewinl_.png" alt="Avatar wideewinl_">
+                    <a href="#wideewinl_"><strong>wideewinl_</strong></a>
+                    <time datetime="2020-10-10">October 10, 2020</time>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </article>
+
+            <!-- Komentar 2 -->
+            <article>
+                <header>
+                    <img src="avatar-hanjihang_.png" alt="Avatar hanjihang_">
+                    <a href="#hanjihang_"><strong>hanjihang_</strong></a>
+                    <time datetime="2020-10-10">October 10, 2020</time>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </article>
+
+            <!-- Form tambah komentar -->
+            <form action="/komentar" method="post">
+                <label for="komentarInput">Tambahkan komentar</label>
+                <textarea id="komentarInput" name="komentar" rows="3" placeholder="Tulis komentar..."></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <!-- ===== Karya Lainnya ===== -->
+        <section aria-label="Karya Lainnya">
+            <h2>Karya Lainnya</h2>
+            <ul>
+                <li>
+                    <a href="#karya-1">
+                        <img src="thumb-1.jpg" alt="Thumbnail karya 1">
+                    </a>
+                </li>
+                <li>
+                    <a href="#karya-2">
+                        <img src="thumb-2.jpg" alt="Thumbnail karya 2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#karya-3">
+                        <img src="thumb-3.jpg" alt="Thumbnail karya 3">
+                    </a>
+                </li>
+                <li>
+                    <a href="#karya-4">
+                        <img src="thumb-4.jpg" alt="Thumbnail karya 4">
+                    </a>
+                </li>
+                <li>
+                    <a href="#karya-5">
+                        <img src="thumb-5.jpg" alt="Thumbnail karya 5">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>
