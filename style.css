@@ -1,0 +1,305 @@
+:root {
+    --bg: #ffffff;
+    --surface: #f4f4f5;
+    --line: #e4e4e7;
+    --text: #18181b;
+    --muted: #71717a;
+    --radius: 12px;
+}
+
+/* ===== Reset & dasar ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, textarea { font: inherit; color: inherit; }
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    grid-template-areas:
+        "aside main"
+        "aside footer";
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+aside {
+    grid-area: aside;
+    position: sticky; top: 0;
+    height: 100vh;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 32px 0;
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+}
+aside > nav { flex: 1; margin-top: 40px; }
+aside > nav ul {
+    height: 100%;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+aside > nav li:last-child { margin-top: auto; }
+aside > nav a {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center;
+    transition: background .2s;
+}
+aside > nav a:hover { background: var(--line); }
+aside > nav li:first-child a { background: var(--text); }
+aside > nav li:first-child a img { filter: invert(1); }
+aside img { width: 24px; height: 24px; }
+aside > div img { width: 44px; height: 44px; }
+
+main { grid-area: main; padding: 40px 48px; max-width: 1280px; width: 100%; }
+
+footer {
+    grid-area: footer;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    margin: 0 48px; padding: 24px 0 32px;
+    border-top: 1px solid var(--line);
+    font-size: 13px; color: var(--muted);
+}
+footer ul { display: flex; gap: 20px; }
+footer a:hover { color: var(--text); }
+
+/* Header: search + akun */
+main > header { display: flex; align-items: center; gap: 20px; }
+main > header form {
+    flex: 1; display: flex; align-items: center;
+    height: 48px; padding: 0 8px 0 20px;
+    background: var(--surface);
+    border: 1px solid var(--line); border-radius: 999px;
+    transition: border-color .2s, box-shadow .2s;
+}
+main > header form:focus-within { border-color: var(--muted); box-shadow: 0 0 0 4px var(--line); }
+main > header form label {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+}
+main > header form input {
+    flex: 1; height: 100%; background: none; border: 0; outline: 0; font-size: 15px;
+}
+main > header form input::placeholder { color: var(--muted); }
+main > header form button {
+    width: 36px; height: 36px; border: 0; border-radius: 50%;
+    background: none; cursor: pointer; display: grid; place-items: center;
+}
+main > header form button:hover { background: var(--line); }
+main > header form button img { width: 18px; height: 18px; }
+
+/* Dropdown akun */
+main > header > div { position: relative; }
+main > header > div > a img {
+    width: 48px; height: 48px; border-radius: 50%;
+    object-fit: cover; background: var(--line);
+    border: 2px solid var(--line);
+}
+main > header > div ul {
+    position: absolute; top: calc(100% + 8px); right: 0; z-index: 10;
+    min-width: 180px; padding: 6px;
+    background: var(--bg);
+    border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    opacity: 0; visibility: hidden; transform: translateY(-4px);
+    transition: .15s;
+}
+main > header > div:hover ul,
+main > header > div:focus-within ul { opacity: 1; visibility: visible; transform: none; }
+main > header > div li a { display: block; padding: 8px 12px; border-radius: 6px; font-size: 14px; }
+main > header > div li a:hover { background: var(--surface); }
+
+/* Kategori */
+section[aria-label="Kategori Karya"] { margin-top: 24px; }
+section[aria-label="Kategori Karya"] h2 {
+    font-size: 13px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--muted); margin-bottom: 10px;
+}
+section[aria-label="Kategori Karya"] ul { display: flex; flex-wrap: wrap; gap: 10px; }
+section[aria-label="Kategori Karya"] a {
+    display: inline-block; padding: 6px 18px; font-size: 14px;
+    border: 1px solid var(--line); border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+}
+section[aria-label="Kategori Karya"] a:hover {
+    background: var(--text); color: var(--bg); border-color: var(--text);
+}
+
+/* Galeri grid */
+section[aria-label="Galeri Karya"] { margin-top: 36px; }
+section[aria-label="Galeri Karya"] h2 { font-size: 22px; font-weight: 700; margin-bottom: 18px; }
+section[aria-label="Galeri Karya"] > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+section[aria-label="Galeri Karya"] article {
+    background: var(--bg);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 8px;
+    transition: transform .2s, box-shadow .2s;
+}
+section[aria-label="Galeri Karya"] article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+section[aria-label="Galeri Karya"] img {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 8px; background: var(--surface);
+    color: var(--muted); font-size: 13px;
+}
+section[aria-label="Galeri Karya"] figcaption { margin: 10px 4px 2px; font-size: 13px; color: var(--muted); }
+section[aria-label="Galeri Karya"] figcaption a { color: var(--text); font-weight: 600; }
+section[aria-label="Galeri Karya"] figcaption a:hover { text-decoration: underline; }
+
+/* Muat lebih banyak */
+section[aria-label="Navigasi Halaman"] { display: flex; justify-content: center; margin-top: 44px; }
+
+main:has(> section[aria-label="Detail Karya"]) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "detail komentar"
+        "lainnya lainnya";
+    gap: 40px 32px;
+    align-items: start;
+}
+
+/* Karya utama */
+section[aria-label="Detail Karya"] { grid-area: detail; }
+section[aria-label="Detail Karya"] > header { margin-bottom: 16px; }
+section[aria-label="Detail Karya"] h1 { font-size: 30px; font-weight: 700; line-height: 1.2; }
+section[aria-label="Detail Karya"] > header p { font-size: 14px; color: var(--muted); }
+section[aria-label="Detail Karya"] > header a { color: var(--text); font-weight: 600; }
+section[aria-label="Detail Karya"] > header a:hover { text-decoration: underline; }
+section[aria-label="Detail Karya"] figure img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+    background: var(--surface);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    color: var(--muted); font-size: 13px;
+}
+section[aria-label="Detail Karya"] figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
+
+/* Tombol aksi */
+section[aria-label="Detail Karya"] > div { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+section[aria-label="Detail Karya"] > div button {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 18px; font-size: 14px; cursor: pointer;
+    background: var(--bg);
+    border: 1px solid var(--line); border-radius: 999px;
+    transition: background .2s;
+}
+section[aria-label="Detail Karya"] > div button:hover { background: var(--surface); }
+section[aria-label="Detail Karya"] > div button img { width: 18px; height: 18px; }
+
+/* Komentar */
+section[aria-label="Komentar"] {
+    grid-area: komentar;
+    position: sticky; top: 24px;
+    display: flex; flex-direction: column; gap: 18px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line); border-radius: var(--radius);
+}
+section[aria-label="Komentar"] h2 { font-size: 18px; font-weight: 700; }
+section[aria-label="Komentar"] article > header {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+section[aria-label="Komentar"] article > header img {
+    grid-row: 1 / 3;
+    width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
+    background: var(--line); font-size: 0;
+}
+section[aria-label="Komentar"] article strong { font-size: 14px; }
+section[aria-label="Komentar"] article time { font-size: 12px; color: var(--muted); }
+section[aria-label="Komentar"] article p { font-size: 14px; }
+
+/* Form komentar */
+section[aria-label="Komentar"] form {
+    display: flex; flex-direction: column; gap: 8px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+}
+section[aria-label="Komentar"] label { font-size: 13px; font-weight: 600; }
+section[aria-label="Komentar"] textarea {
+    width: 100%; padding: 10px 12px; resize: vertical;
+    background: var(--bg);
+    border: 1px solid var(--line); border-radius: 8px;
+    outline: 0; transition: border-color .2s, box-shadow .2s;
+}
+section[aria-label="Komentar"] textarea:focus { border-color: var(--muted); box-shadow: 0 0 0 4px var(--line); }
+section[aria-label="Komentar"] textarea::placeholder { color: var(--muted); }
+
+/* Karya lainnya */
+section[aria-label="Karya Lainnya"] { grid-area: lainnya; }
+section[aria-label="Karya Lainnya"] h2 { font-size: 22px; font-weight: 700; margin-bottom: 18px; }
+section[aria-label="Karya Lainnya"] ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+section[aria-label="Karya Lainnya"] a { display: block; border-radius: var(--radius); overflow: hidden; }
+section[aria-label="Karya Lainnya"] img {
+    width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+    background: var(--surface); color: var(--muted); font-size: 13px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    transition: transform .3s;
+}
+section[aria-label="Karya Lainnya"] a:hover img { transform: scale(1.04); }
+
+section[aria-label="Navigasi Halaman"] button,
+section[aria-label="Komentar"] form button {
+    padding: 12px 32px; border-radius: 999px; cursor: pointer;
+    background: var(--text); color: var(--bg); border: 0;
+    font-size: 14px; font-weight: 600;
+    transition: opacity .2s;
+}
+section[aria-label="Komentar"] form button { align-self: flex-end; padding: 8px 22px; }
+section[aria-label="Navigasi Halaman"] button:hover,
+section[aria-label="Komentar"] form button:hover { opacity: .85; }
+
+
+@media (max-width: 1024px) {
+    main { padding: 32px; }
+    footer { margin: 0 32px; }
+    section[aria-label="Galeri Karya"] > div { grid-template-columns: repeat(2, 1fr); }
+
+    main:has(> section[aria-label="Detail Karya"]) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "detail" "komentar" "lainnya";
+    }
+    section[aria-label="Komentar"] { position: static; }
+    section[aria-label="Karya Lainnya"] ul { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main" "footer" "aside";
+        grid-template-rows: 1fr auto auto;
+    }
+    aside {
+        position: sticky; bottom: 0; top: auto; z-index: 20;
+        height: auto; flex-direction: row; padding: 8px 12px;
+        border-right: 0; border-top: 1px solid var(--line);
+    }
+    aside > div { display: none; }
+    aside > nav { margin: 0; width: 100%; }
+    aside > nav ul { flex-direction: row; justify-content: space-around; gap: 0; }
+    aside > nav li:last-child { margin-top: 0; }
+
+    main { padding: 20px 16px; }
+    main > header { gap: 12px; }
+    section[aria-label="Kategori Karya"] ul { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+    section[aria-label="Kategori Karya"] a { white-space: nowrap; }
+    section[aria-label="Galeri Karya"] > div { grid-template-columns: 1fr; }
+    section[aria-label="Karya Lainnya"] ul { grid-template-columns: repeat(2, 1fr); }
+    footer { margin: 0 16px; flex-direction: column; text-align: center; }
+}
