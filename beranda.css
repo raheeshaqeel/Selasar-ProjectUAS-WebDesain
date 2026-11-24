@@ -1,0 +1,77 @@
+.page-beranda * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-beranda {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.page-beranda img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-beranda button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.page-beranda ul {
+  list-style: none;
+}
+
+.page-beranda .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-beranda .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.page-beranda .search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-beranda .search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.page-beranda .profile-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-beranda .category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.page-beranda .events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
