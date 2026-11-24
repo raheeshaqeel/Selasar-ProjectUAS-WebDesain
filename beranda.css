@@ -75,3 +75,49 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
+
+.page-beranda .search-box {
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  padding: 10px 20px;
+  background: 
+    linear-gradient(#1a1a1d, #1a1a1d) padding-box,
+    linear-gradient(90deg, #3C3CDD 0%, #C05E42 100%) border-box;
+}
+
+.page-beranda .search-box input::placeholder {
+  color: #71717a;
+}
+
+.page-beranda .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(180deg, #C05E42 0%, #3E2018 100%);
+}
+
+.page-beranda .avatar.is-kreator {
+  background: linear-gradient(180deg, #3C3CDD 0%, #202077 39%, #202077 100%);
+}
+
+.page-beranda .chip {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: 
+    linear-gradient(#18181b, #18181b) padding-box,
+    linear-gradient(90deg, #3C3CDD 0%, #C05E42 100%) border-box;
+  color: #d4d4d8;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.page-beranda .chip:hover,
+.page-beranda .chip.active {
+  background: 
+    linear-gradient(#262235, #262235) padding-box,
+    linear-gradient(90deg, #3C3CDD 0%, #C05E42 100%) border-box;
+  color: #ffffff;
+}
