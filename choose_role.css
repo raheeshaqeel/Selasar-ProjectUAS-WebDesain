@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Koolegant";
+  src: url("fonts/Koolegant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*buat background sama font*/
 body.choose-role {
   background-color: #111111;
