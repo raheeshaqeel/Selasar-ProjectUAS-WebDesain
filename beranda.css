@@ -122,7 +122,12 @@
   color: #ffffff;
 }
 
-/* cards */
+.page-beranda .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .page-beranda .card {
   background-color: #141414;
   border-radius: 16px;
