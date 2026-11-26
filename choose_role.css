@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Koolegant";
+  src: url("fonts/Koolegant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*buat background sama font*/
+body.choose-role {
+  background-color: #111111;
+  color: #e0e0e0;
+  min-height: 100vh;
+  font-family: "poppins", sans-serif;
+}
+
+.role-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/*ini buat title "siapa anda di platform ini"*/
+.role-section h1 {
+  font-family: "Koolegant", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/*buat card container, yang role itu*/
+.role-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+/*card setiap role*/
+.role-card {
+  width: 360px;
+  height: 330px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #e0e0e0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/*warga*/
+.role-card.warga {
+  background: linear-gradient(180deg, #c15f43, #d18069);
+
+  box-shadow: 0 7px 10px rgba(193, 95, 67, 0.5);
+}
+
+/*kreator*/
+.role-card.kreator {
+  background: linear-gradient(180deg, #423be4, #8580ff);
+
+  box-shadow: 0 7px 10px rgba(78, 69, 235, 0.5);
+}
+
+.role-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.role-card h2 {
+  font-size: 28px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-card.warga:hover {
+  box-shadow: 0 12px 18px rgba(193, 95, 67, 0.65);
+}
+
+.role-card.kreator:hover {
+  box-shadow: 0 12px 18px rgba(78, 69, 235, 0.65);
+}
+
+/*deskripsi*/
+.role-description {
+  max-width: 950px;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.text-kreator {
+  color: #5148ff;
+}
+
+.text-warga {
+  color: #c15f43;
+}
+
+/*responsive buat table t*/
+@media (max-width: 800px) {
+  .role-container {
+    gap: 20px;
+  }
+
+  .role-card {
+    width: 300px;
+    height: 290px;
+  }
+
+  .role-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .role-card h2 {
+    font-size: 24px;
+  }
+
+  .role-description {
+    font-size: 19px;
+  }
+}
+
+/*responsive buat hp*/
+@media (max-width: 650px) {
+  .role-section {
+    padding: 50px 20px;
+  }
+
+  .role-section h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .role-container {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .role-card {
+    width: min(100%, 350px);
+    height: 280px;
+  }
+
+  .role-card img {
+    width: 150px;
+    height: 150px;
+  }
+}
