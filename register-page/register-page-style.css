@@ -1,0 +1,253 @@
+/* SELASAR - daftar.css (khusus daftar.html) */
+
+/* ---------- Font judul: Koolegant (file lokal, lihat catatan di bawah) ----------
+   Taruh file font di folder:  fonts/Koolegant.ttf
+   Font body (Poppins) dimuat dari Google Fonts lewat <link> di HTML. */
+@font-face {
+  font-family: "Koolegant";
+  src: url("../fonts/Koolegant.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Token ---------- */
+:root {
+  --bg-landing: #121212;
+  --bg-form: #000000;
+  --field: #1e1e1e;
+  --field-border: #2e2e2e;
+  --text: #e6e6e6;
+  --text-muted: #a9a9a9;
+  --indigo: #3b3be0;
+  --indigo-link: #4a4af0;
+  --blue-link: #2f7cf0;
+  --coral: #d9573f;
+  --light-btn: #e0e0e0;
+
+  --font-title: "Koolegant", Georgia, "Times New Roman", serif;
+  --font-body: "Poppins", system-ui, sans-serif;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg-form);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Judul "Selasar" ---------- */
+.wordmark {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-align: center;
+}
+
+/* =========================================================
+   LAYOUT FORM (gambar kiri, form kanan)
+   ========================================================= */
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: var(--bg-form);
+}
+
+/* kiri: lukisan, digelapkan */
+.auth-art {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.auth-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.62);
+}
+
+/* kanan: form */
+.auth-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 447px;
+}
+
+.auth-box .wordmark {
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="password"] {
+  width: 100%;
+  height: 49px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--field);
+  border: 2px solid var(--field-border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form input:focus {
+  border-color: var(--indigo);
+}
+
+/* tombol utama selebar form */
+.btn-block {
+  width: 100%;
+  height: 58px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--indigo);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.btn-block:hover {
+  filter: brightness(1.12);
+}
+
+.btn-block:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   KHUSUS HALAMAN DAFTAR
+   ========================================================= */
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 18px 0 28px;
+}
+
+.check-row input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  background: var(--light-btn);
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.check-row input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--bg-form);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.check-row input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 2px;
+}
+
+.check-row label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.check-row label a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.check-row label a:hover {
+  text-decoration: underline;
+}
+
+/* ----- responsif: gambar jadi banner di atas form ----- */
+@media (max-width: 820px) {
+  .auth {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-art {
+    position: relative;
+    height: 200px;
+  }
+
+  .auth-panel {
+    padding: 40px 24px 56px;
+  }
+
+  .wordmark {
+    font-size: 60px;
+  }
+}
