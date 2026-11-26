@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Kreator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <aside class="sidebar">
       <img src="img/logo_selasar.png" alt="Logo" />
@@ -41,32 +46,36 @@
       </header>
 
       <img src="img/banner.png" alt="Banner" width="100%" />
+      <div class="banner-kreator"></div>
 
-      <!-- INFO PROFIL -->
-      <section>
-        <img src="img/profil.png" alt="Foto Profil" width="200" />
-        <h2>@hanjehanje</h2>
-        <p><strong>Kreator</strong></p>
+      <section class="profil-kreator">
+        <img src="img/profil.png" alt="Foto Profil" width="150" />
+        <div class="profil-info-kreator">
+          <h2>@hanjehanje</h2>
+          <span class="badge-kreator">Kreator</span>
+        </div>
 
-        <table>
-          <tr>
-            <th>Karya</th>
-            <th>Pengikut</th>
-            <th>Mengikuti</th>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>3</td>
-            <td>200</td>
-          </tr>
-        </table>
+        <div class="stats-kreator">
+          <div class="stat">
+            <span class="stat-label">Karya</span>
+            <span class="stat-value">8</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Pengikut</span>
+            <span class="stat-value">3</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Mengikuti</span>
+            <span class="stat-value">200</span>
+          </div>
+        </div>
 
-        <button>Edit Profil</button><br />
-        <button>Analitik</button><br />
-        <button>Unggah</button>
+        <a href="#" class="edit-kreator">Edit Profil</a>
+        <a href="#" class="analitik">Analitik</a>
+        <a href="#" class="Unggah">Unggah</a>
+        
       </section>
 
-      <!-- TAB -->
       <nav>
         <a href="#"><img src="img/tab-galeri.png" alt="Galeri" width="30" /></a>
         <a href="#"><img src="img/tab-privat.png" alt="Privat" width="30" /></a>
@@ -75,7 +84,6 @@
         /></a>
       </nav>
 
-      <!-- GALERI -->
       <section>
         <img src="img/karya1.png" alt="Karya 1" width="250" />
         <img src="img/karya2.png" alt="Karya 2" width="250" />
