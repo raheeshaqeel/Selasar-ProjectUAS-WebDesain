@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.sidebar {
+  width: 99px;
+  flex-shrink: 0;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-image: linear-gradient(to bottom, #3c3cdd, #c05e42) 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px;
+  gap: 30px;
+}
+.sidebar > img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 24px;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+.sidebar a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.sidebar a:hover {
+  background: linear-gradient(to bottom, #3c3cdd, #c05e42);
+}
+.sidebar a:last-child {
+  margin-top: auto;
+}
+
+main {
+  flex: 1;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 18px 24px;
+  color: #fff;
+}
+.topbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.topbar .kembali {
+  position: absolute;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-warga {
+  height: 320px;
+  background: linear-gradient(to bottom, #c05e42, #121212);
+}
+.banner-kreator {
+  height: 24px;
+  background: linear-gradient(to bottom, #3c3cdd, #121212);
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+.profil-warga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -300px;
+}
+
+.profil-info-warga {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge-warga {
+  background-color: #c05e42;
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 40;
+  padding: 4px 18px;
+  border-radius: 24px;
+  line-height: 1.2;
+}
+
+.stats-warga {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 22px;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.stat-label {
+  color: #ffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.stat-value {
+  color: #cfcfcf;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.edit-warga {
+  display: block;
+  width: 350%;
+  max-width: 350px;
+  margin-top: 24px;
+  padding: 8px 0px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #3c3cdd, #c05e42) border-box;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.edit:hover {
+  opacity: 0.8;
+}
+
+.kreator {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.pindahkreator {
+  width: 100%;
+  max-width: 350px;
+  padding: 18px 18px 16px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #3c3cdd, #c05e42) border-box;
+  text-align: center;
+}
+
+.pindahkreator h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pindahkreator p {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.Kreator {
+  display: block;
+  width: 100%;
+  padding: 9px 0px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  background: linear-gradient(to right, #3c3cdd, #c05e42) border-box;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.Kreator:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.profil-kreator {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+  padding-left: 40px;
+  margin-top: -100px;
+}
+
+.profil-info-kreator {
+  font-size: 14px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge-kreator {
+  background-color: #3c3cdd;
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 1px 18px;
+  padding-top: 8px;
+  border-radius: 24px;
+  line-height: 1.2;
+}
+.stats-kreator {
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+  margin-top: 22px;
+}
+.edit-kreator {
+  display: block;
+  width: 240%;
+  max-width: 240px;
+  margin-top: 24px;
+  padding: 8px 0px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #3c3cdd, #c05e42) border-box;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
+.analitik {
+  display: block;
+  width: 240%;
+  max-width: 240px;
+  margin-top: 8px;
+  padding: 8px 0px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #3c3cdd, #c05e42) border-box;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
+.Unggah {
+  display: block;
+  color: #121212;
+  width: 240%;
+  max-width: 240px;
+  margin-top: 8px;
+  padding: 8px 0px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(#fff) border-box;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+}
