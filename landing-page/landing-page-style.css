@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Koolegant";
-  src: url("../fonts/Koolegant.ttf") format("truetype");
+  src: url("../aset/fonts/Koolegant.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -38,6 +38,8 @@ body {
 
 body {
   font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text);
   background: var(--bg-form);
   -webkit-font-smoothing: antialiased;
@@ -62,8 +64,8 @@ img {
 .wordmark {
   font-family: var(--font-title);
   font-weight: 400;
-  font-size: 72px;
-  line-height: 1;
+  font-size: 52px;
+  line-height: 1.05;
   letter-spacing: -0.01em;
   color: var(--text);
   text-align: center;
@@ -73,7 +75,7 @@ img {
   position: relative;
   min-height: 100vh;
   background: var(--bg-landing);
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .bg-deco {
@@ -92,6 +94,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 24px;
+  padding: 32px 48px;
 }
 
 .hero {
@@ -99,43 +103,46 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px;
+  padding: 24px;
 }
 
 .hero-logo {
-  width: 125px;
+  width: 88px;
   height: auto;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .hero .wordmark {
-  font-size: 76px;
+  font-size: 56px;
 }
 
 .tagline {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.2;
-  margin-top: 22px;
-  color: #ededed;
+  font-size: 18px;
+  line-height: 1.45;
+  margin-top: 14px;
+  color: #e0e0e0;
 }
 
 .hero-actions {
   display: flex;
-  gap: 16px;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 177px;
-  height: 58px;
-  font-size: 18px;
+  min-width: 144px;
+  height: 46px;
+  padding: 0 20px;
+  font-size: 15px;
   font-weight: 500;
-  border-radius: 12px;
-  border: 2px solid transparent;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
   cursor: pointer;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
@@ -169,11 +176,12 @@ img {
 /* ----- kolom kanan: galeri ----- */
 .gallery {
   display: flex;
-  gap: 36px;
+  gap: 20px;
   align-items: center;
-  width: 44.2vw;
-  margin-left: 54px;
-  padding: 24px 0;
+  width: 100%;
+  max-width: 540px;
+  justify-self: center;
+  padding: 12px 0;
 }
 
 .gallery-col {
@@ -183,51 +191,76 @@ img {
 
 .gallery-col.col-a {
   flex: 382;
-  gap: 35px;
+  gap: 20px;
 }
 
 .gallery-col.col-b {
   flex: 345;
-  gap: 56px;
+  gap: 28px;
 }
 
 .gallery img {
   width: 100%;
   object-fit: cover;
-  border-radius: 24px;
-  filter: brightness(0.78);
-  box-shadow: 0 6px 26px rgba(91, 63, 214, 0.5);
+  border-radius: 16px;
+  filter: brightness(0.8);
+  box-shadow: 0 6px 24px rgba(91, 63, 214, 0.35);
 }
 
-.gallery .foto-1 { aspect-ratio: 382 / 556; }
-.gallery .foto-3 { aspect-ratio: 382 / 270; box-shadow: 0 6px 26px rgba(91, 63, 214, 0.18); }
-.gallery .foto-2 { aspect-ratio: 345 / 392; box-shadow: 0 0 22px rgba(91, 63, 214, 0.6); }
-.gallery .foto-4 { aspect-ratio: 345 / 395; box-shadow: 0 6px 26px rgba(91, 63, 214, 0.5); }
+.gallery .foto-1 { aspect-ratio: 382 / 460; }
+.gallery .foto-3 { aspect-ratio: 382 / 250; box-shadow: 0 6px 20px rgba(91, 63, 214, 0.18); }
+.gallery .foto-2 { aspect-ratio: 345 / 340; box-shadow: 0 0 20px rgba(91, 63, 214, 0.45); }
+.gallery .foto-4 { aspect-ratio: 345 / 350; box-shadow: 0 6px 24px rgba(91, 63, 214, 0.35); }
 
 /* ----- responsif ----- */
-@media (max-width: 1100px) {
-  .hero .wordmark { font-size: 60px; }
-  .tagline { font-size: 30px; }
-  .hero-actions { flex-direction: column; }
+@media (max-width: 1024px) {
+  .landing-main {
+    padding: 28px 24px;
+  }
+
+  .hero .wordmark {
+    font-size: 48px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 820px) {
   .landing-main {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 36px 20px 48px;
+  }
+
+  .hero {
+    padding: 8px 12px;
   }
 
   .gallery {
-    width: calc(100% - 48px);
-    margin: 0 24px 48px;
-    gap: 16px;
+    max-width: 480px;
+    gap: 14px;
   }
 
   .gallery-col.col-a,
   .gallery-col.col-b {
-    gap: 16px;
+    gap: 14px;
   }
 
   .gallery img {
-    border-radius: 16px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
