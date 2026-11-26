@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <!-- Logo -->
+        <div>
+            <a href="#"><img src="logo-gradient.png" alt="Artist Page Logo"></a>
+        </div>
+
+        <!-- Navigasi -->
+        <nav>
+            <ul>
+                <li><a href="#beranda" title="Beranda"><img src="icon-home.png" alt="Beranda"></a></li>
+                <li><a href="#karya" title="Karya"><img src="icon-gallery.png" alt="Karya"></a></li>
+                <li><a href="#peta" title="Peta"><img src="icon-map.png" alt="Peta"></a></li>
+                <li><a href="#komunitas" title="Komunitas"><img src="icon-community.png" alt="Komunitas"></a></li>
+                <li><a href="#notifikasi" title="Notifikasi"><img src="icon-bell.png" alt="Notifikasi"></a></li>
+                <li><a href="#pengaturan" title="Pengaturan"><img src="icon-settings.png" alt="Pengaturan"></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <form action="/cari" method="get" role="search">
+                <label for="searchInput">Cari acara yang ingin kamu kunjungi</label>
+                <input type="search" id="searchInput" name="q" placeholder="Cari acara yang ingin kamu kunjungi">
+                <button type="submit"><img src="icon-search.png" alt="Cari"></button>
+            </form>
+            <div>
+                <a href="#akun">
+                    <img src="avatar-user.png" alt="Avatar Pengguna">
+                </a>
+                <ul>
+                    <li><a href="#profil">Profil Saya</a></li>
+                    <li><a href="#karya-saya">Karya Saya</a></li>
+                    <li><a href="#disimpan">Disimpan</a></li>
+                    <li><a href="#keluar">Keluar</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section aria-label="Kategori Karya">
+            <h2>Kategori</h2>
+            <nav>
+                <ul>
+                    <li><a href="#ilustrasi">Ilustrasi</a></li>
+                    <li><a href="#desain-grafis">Desain Grafis</a></li>
+                    <li><a href="#musik">Musik</a></li>
+                    <li><a href="#fotografi">Fotografi</a></li>
+                    <li><a href="#lukisan">Lukisan</a></li>
+                    <li><a href="#3d-art">3D Art</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Galeri Karya (grid 3 kolom) -->
+        <section aria-label="Galeri Karya">
+            <h2>Karya Terbaru</h2>
+
+            <div>
+                <article>
+                    <figure>
+                        <img src="karya-portrait-1.jpg" alt="Ilustrasi Potret Wanita">
+                        <figcaption>oleh <a href="#luninini_k">@luninini_k</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-anime.jpg" alt="Karya Anime">
+                        <figcaption>oleh <a href="#joetheblack">@joetheblack</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-sketch.jpg" alt="Sketsa Pensil">
+                        <figcaption>oleh <a href="#pie__art">@pie__art</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-fotografi.jpg" alt="Foto Kamera Canon">
+                        <figcaption>oleh <a href="#arthelia__">@arthelia__</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-portrait-2.jpg" alt="Ilustrasi Potret">
+                        <figcaption>oleh <a href="#luninini_k">@luninini_k</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-3d.jpg" alt="Seni 3D">
+                        <figcaption>oleh <a href="#arthelia__">@arthelia__</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-lukisan.jpg" alt="Lukisan Digital">
+                        <figcaption>oleh <a href="#joetheblack">@joetheblack</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-desain.jpg" alt="Desain Grafis">
+                        <figcaption>oleh <a href="#pie__art">@pie__art</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-portrait-3.jpg" alt="Ilustrasi Karakter">
+                        <figcaption>oleh <a href="#luninini_k">@luninini_k</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-fotografi-2.jpg" alt="Foto Street">
+                        <figcaption>oleh <a href="#arthelia__">@arthelia__</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-anime-2.jpg" alt="Ilustrasi Anime">
+                        <figcaption>oleh <a href="#joetheblack">@joetheblack</a></figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="karya-sketch-2.jpg" alt="Sketsa Tangan">
+                        <figcaption>oleh <a href="#pie__art">@pie__art</a></figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <!-- Muat Lebih Banyak -->
+        <section aria-label="Navigasi Halaman">
+            <button type="button">Muat Lebih Banyak</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Artist Page. Semua hak cipta dilindungi.</p>
+        <nav>
+            <ul>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#privasi">Kebijakan Privasi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
