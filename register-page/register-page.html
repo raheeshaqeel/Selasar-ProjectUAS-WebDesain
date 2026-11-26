@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Selasar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="register-page-style.css">
+</head>
+<body>
+
+  <div class="auth">
+
+    <!-- ===== KIRI: gambar lukisan ===== -->
+    <section class="auth-art">
+      <img src="lukisan.jpg" alt="Lukisan langit-langit klasik">
+    </section>
+
+    <!-- ===== KANAN: form daftar ===== -->
+    <main class="auth-panel">
+      <div class="auth-box">
+        <h1 class="wordmark">Selasar</h1>
+
+        <form class="form" action="#" method="post">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+
+          <label for="username">Nama Pengguna</label>
+          <input type="text" id="username" name="username" autocomplete="username">
+
+          <label for="sandi">Kata Sandi</label>
+          <input type="password" id="sandi" name="sandi" autocomplete="new-password">
+
+          <label for="verifikasi">Verifikasi Sandi</label>
+          <input type="password" id="verifikasi" name="verifikasi" autocomplete="new-password">
+
+          <div class="check-row">
+            <input type="checkbox" id="setuju" name="setuju">
+            <label for="setuju">
+              Saya berusia setidaknya 16 tahun dan menyetujui
+              <a href="ketentuan.html">Ketentuan Penggunaan</a>.
+            </label>
+          </div>
+
+          <button class="btn-block" type="submit">Daftar</button>
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
